@@ -1,2 +1,10 @@
 # COSC310-group-project
-this is a inventory management system
+The project is an inventory management system made for ski and bike shops with option of rentals. The system will have 3 main components, a central database which keeps track of all information, an interface to be used by employees which can make transactions and a more in-depth interface to be used by a manager to manage stock, input new orders, view sales stats and stock warnings, etc. The main features that we need to implement are a login system for entering credentials to access either the manager or cashier screen, a cashier system that can process sales, and a management system that can add products, view sales, and manage suppliers.
+The instructions to run the project are: To run the system on your device you would need to install the docker application. Next, create a directory called cosc310 database in your sytem You now need to compose the created directory in docker using the terminal and the command docker-compose up -d. Once that is done successfully you can run the entire system using intelliJ code editor by opening the project file. You will need to add the JAR file provided into the intelliJ source code file for dependency and you will be able to use the system
+The cashier class contains methods to add an item, delete an item, to logout of the system and to record the sale made to the database. The login class has two methods one for the manager login and one for the cashier login. Both the methods register the cashier and the manager within a databse and uses that database to verify the credentials to login successfully.
+
+The manage employees class has a method which has a list of all the employees connected to the database. With the updateList method the manager can update the list of employees. The class also has methods for logging out and going to the home screen.
+
+The supplier class has methods to add and delete suppliers and the class is connected to the database which can be accessed locally
+
+Lastly, the manager class has several methods which are easy to interpret such as to manage sales, the inventory and the low stock alerts warning. The manager can add item and delte items in the inventory through respective methods.
