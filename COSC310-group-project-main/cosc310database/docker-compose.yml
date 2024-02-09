@@ -1,0 +1,17 @@
+version: '3.8'
+services:             
+    cosc310database:
+        image: mysql:8.0
+        container_name: cosc310DB
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 'password'
+        ports:
+            - '3306:3306'
+        expose:
+            - '3306'   
+        volumes:
+            - ./mysql-db:/var/lib/mysql
+            - ./ddl:/docker-entrypoint-initdb.d
+volumes:     
+    mysql-db:
